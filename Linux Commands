@@ -1,0 +1,27 @@
+ls -lh        # List files with human-readable sizes
+ls -lt        # List files sorted by modification time
+cd /var/log   # Change to the /var/log directory
+mkdir data    # Create a directory named 'data'
+rmdir old_dir # Remove an empty directory
+rm -rf logs/  # Remove a directory and all its contents forcefully
+find . -name "*.csv"   # Find all CSV files in the current directory
+find /data -size +100M # Find files larger than 100MB in /data
+head -10 large_data.csv  # Display first 10 lines of a file
+tail -50 logs.txt        # Display last 50 lines of a file
+cat data.json | jq '.'   # Pretty-print JSON files using jq
+sort data.txt | uniq -c  # Remove duplicates & count occurrences
+awk -F, '{print $2}' file.csv  # Print second column of a CSV file
+cut -d',' -f1,3 data.csv  # Extract columns 1 & 3 from a CSV
+sed 's/error/fixed/g' logs.txt  # Replace 'error' with 'fixed'
+grep "ERROR" logs.txt    # Search for "ERROR" in logs
+grep -i "critical" logs.txt   # Case-insensitive search
+wc -l data.csv           # Count number of lines in a file
+scp file.csv user@remote:/data/   # Copy file to remote server
+scp -r /data user@remote:/backup  # Copy directory recursively
+rsync -avz /data/ user@remote:/backup/  # Sync directories efficiently
+wget https://example.com/file.csv  # Download file from URL
+curl -O https://example.com/data.json  # Download using curl
+tar -cvf archive.tar logs/  # Create a tar archive of logs directory
+tar -xvf archive.tar  # Extract a tar archive
+zip -r logs.zip logs/  # Compress files into a zip archive
+unzip logs.zip  # Extract zip file
